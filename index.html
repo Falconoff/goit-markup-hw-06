@@ -452,14 +452,16 @@
           </div>
           <div class="spam">
             <label for="spam-email"
-              ><p class="spam-title">Подпишитесь на рассылку</p></label
+              ><span class="spam-title">Подпишитесь на рассылку</span></label
             >
-            <form class="spam-form" action="" autocomplete="off">
+            <form class="spam-form" autocomplete="off">
               <input
                 class="spam-email"
                 type="email"
                 id="spam-email"
                 placeholder="E-mail"
+                title="Напишите свой ящик, чтоб получать рассылку"
+                required
               />
               <button class="spam-form-btn" type="submit">
                 <span>Подписаться</span
@@ -484,10 +486,18 @@
 
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-        <form action="" class="form" autocomplete="off">
+        <form class="form" method="GET" autocomplete="off">
           <label class="form-field">
             <span class="form-label">Имя</span>
-            <input class="form-input" type="text" name="name" />
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              title="Введите своё имя"
+              minlength="2"
+              maxlength="30"
+              required
+            />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#person"></use>
             </svg>
@@ -495,7 +505,15 @@
 
           <label class="form-field">
             <span class="form-label">Телефон</span>
-            <input class="form-input" type="tel" name="phone" id="" />
+            <input
+              class="form-input"
+              type="tel"
+              name="phone"
+              title="Ведите номер телефона"
+              minlength="3"
+              maxlength="14"
+              required
+            />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#phone"></use>
             </svg>
@@ -503,7 +521,12 @@
 
           <label class="form-field">
             <span class="form-label">Почта</span>
-            <input class="form-input" type="email" name="email" id="" />
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              title="Введите почтовый ящик"
+            />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#email"></use>
             </svg>
@@ -514,8 +537,9 @@
             <textarea
               class="form-input"
               name="form-comments"
-              id=""
               placeholder="Введите текст"
+              title="Тут можно написать свой комментарий"
+              maxlength="200"
             ></textarea>
           </label>
 
@@ -524,9 +548,8 @@
               <input
                 class="visually-hidden"
                 type="checkbox"
-                name="agree"
-                id=""
-                value="agree"
+                name="agreement"
+                value="ok"
               />
               <svg class="agreement-icon" width="16" height="15">
                 <use href="./images/icons.svg#check"></use>

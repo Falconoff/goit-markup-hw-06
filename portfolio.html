@@ -65,26 +65,54 @@
         <div class="container">
           <h1 class="visually-hidden">Наши работы</h1>
 
-          <ul class="filter">
-            <!-- сейчас фильтр кнопками, а будут радиобаттоны -->
-            <li class="item">
-              <button class="btn filter-button" type="button">Все</button>
-            </li>
-            <li class="item">
-              <button class="btn filter-button" type="button">Веб-сайты</button>
-            </li>
-            <li class="item">
-              <button class="btn filter-button" type="button">
-                Приложения
-              </button>
-            </li>
-            <li class="item">
-              <button class="btn filter-button" type="button">Дизайн</button>
-            </li>
-            <li class="item">
-              <button class="btn filter-button" type="button">Маркетинг</button>
-            </li>
-          </ul>
+          <form class="filter">
+            <label class="item">
+              <input
+                class="filter-radio visually-hidden"
+                type="radio"
+                name="filter"
+                value="0"
+                checked
+              />
+              <span class="btn filter-button">Все</span>
+            </label>
+            <label class="item">
+              <input
+                class="filter-radio visually-hidden"
+                type="radio"
+                name="filter"
+                value="1"
+              />
+              <span class="btn filter-button">Веб-сайты</span>
+            </label>
+            <label class="item">
+              <input
+                class="filter-radio visually-hidden"
+                type="radio"
+                name="filter"
+                value="2"
+              />
+              <span class="btn filter-button">Приложения</span>
+            </label>
+            <label class="item">
+              <input
+                class="filter-radio visually-hidden"
+                type="radio"
+                name="filter"
+                value="3"
+              />
+              <span class="btn filter-button">Дизайн</span>
+            </label>
+            <label class="item">
+              <input
+                class="filter-radio visually-hidden"
+                type="radio"
+                name="filter"
+                value="4"
+              />
+              <span class="btn filter-button">Маркетинг</span>
+            </label>
+          </form>
 
           <ul class="gallery">
             <li class="gallery-item">
@@ -367,6 +395,27 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="spam">
+            <label for="spam-email"
+              ><span class="spam-title">Подпишитесь на рассылку</span></label
+            >
+            <form class="spam-form" autocomplete="off">
+              <input
+                class="spam-email"
+                type="email"
+                id="spam-email"
+                placeholder="E-mail"
+                title="Напишите свой ящик, чтоб получать рассылку"
+                required
+              />
+              <button class="spam-form-btn" type="submit">
+                <span>Подписаться</span
+                ><svg class="spam-icon" width="24" height="24">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
