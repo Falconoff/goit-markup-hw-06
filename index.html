@@ -450,13 +450,31 @@
               </li>
             </ul>
           </div>
+          <div class="spam">
+            <label for="spam-email"
+              ><p class="spam-title">Подпишитесь на рассылку</p></label
+            >
+            <form class="spam-form" action="" autocomplete="off">
+              <input
+                class="spam-email"
+                type="email"
+                id="spam-email"
+                placeholder="E-mail"
+              />
+              <button class="spam-form-btn" type="submit">
+                <span>Подписаться</span
+                ><svg class="spam-icon" width="24" height="24">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
 
     <!-- modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal> -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="close-icon" width="11" height="11">
@@ -501,13 +519,22 @@
             ></textarea>
           </label>
 
-          <div class="agreement">
+          <p class="agreement">
             <label class="">
-              <input type="checkbox" name="" id="" value="agree" />
-              <span> Соглашаюсь с рассылкой и принимаю </span>
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="agree"
+                id=""
+                value="agree"
+              />
+              <svg class="agreement-icon" width="16" height="15">
+                <use href="./images/icons.svg#check"></use>
+              </svg>
+              <span>Соглашаюсь с рассылкой и принимаю </span>
             </label>
             <a href="">Условия договора</a>
-          </div>
+          </p>
           <button class="btn-submit" type="submit">Отправить</button>
         </form>
       </div>
