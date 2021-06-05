@@ -888,12 +888,11 @@ textarea.form-input {
 
   fill: var(--white-color);
   background-color: var(--white-color);
-  transition-property: background-color, border-color;
+  transition-property: border-color;
   transition-duration: var(--trans-duration);
   transition-timing-function: var(--timing-function);
 }
 
-.agreement input[type='checkbox']:hover + .agreement-icon,
 .agreement input[type='checkbox']:focus + .agreement-icon {
   border-color: var(--accent-color);
 }
